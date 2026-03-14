@@ -1,0 +1,181 @@
+:root {
+  --primary-color: #333;
+  --accent2-color: #f4f4f4;
+  --paragraph-font: "Lato", Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--paragraph-font);
+  margin: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 90px;
+  height: 90px;
+  margin: 0.5rem;
+  padding: 0.3rem;
+}
+
+#menu {
+  display: block;
+  font-size: 2rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+#menu::before {
+  content: "☰";
+  color: var(--primary-color);
+}
+
+#menu.open::before {
+  content: "✖";
+}
+
+nav {
+  width: 100%;
+}
+
+.navigation {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  background-color: #333;
+  width: 100%;
+}
+
+.navigation li {
+  width: 100%;
+}
+
+.navigation a {
+  display: block;
+  padding: 0.8rem;
+  color: #eee;
+  text-decoration: none;
+  text-align: center;
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+.navigation a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: yellow;
+}
+
+.navigation.open {
+  display: flex;
+}
+
+h2 {
+  font-family: "Roboto", Arial, sans-serif;
+  color: #333;
+  background-color: aquamarine;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.about-section,
+.photo-section,
+.certificate-section {
+  margin: 1rem 0;
+  padding: 0.5rem;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.photo-section img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-me {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+button {
+  background-color: #333;
+  color: #eee;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-family: "Roboto", Arial, sans-serif;
+  border-radius: 0.5rem;
+}
+
+.course-with-abrv button {
+  width: 30%;
+  margin-top: 1rem;
+}
+
+.course-without-abrv button {
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  color: #000;
+  font-size: 30px;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+footer {
+  background-color: white;
+  padding: 0.5rem;
+  text-align: center;
+  color: black;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer p {
+  margin: 0.3rem;
+  font-size: large;
+}
+
+@media (min-width: 768px) {
+  #menu {
+    display: none;
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .navigation li {
+    flex: 1;
+  }
+}
