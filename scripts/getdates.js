@@ -36,21 +36,21 @@ const courses = [
     subject: "CSE",
     number: 111,
     credits: 2,
-    completed: false,
+    completed: true,
   },
 
   {
     subject: "CSE",
     number: 210,
     credits: 2,
-    completed: false,
+    completed: true,
   },
 
   {
     subject: "WDD",
     number: 131,
     credits: 2,
-    completed: false,
+    completed: true,
   },
 
   {
